@@ -29,3 +29,41 @@ export interface CarProps {
     transmission: string;
     year: number;
 }
+
+export interface FilterProps {
+    model: string;
+    manufacturer: string;
+    fuel: string;
+    limit: number;
+    year: number;
+}
+
+export interface CustomFilterProps {
+    title: string;
+    options: OptionProps[];
+}
+
+export interface OptionProps { 
+    title: string;
+    value: string;
+}
+
+export interface ShowMoreProps {
+    pageNumber: number;
+    isNext: boolean;
+}
+
+export interface CarsPageSearchParams {
+    manufacturer?: string;
+    model?: string
+    year?: number;
+    fuel?: string;
+    limit?: number
+}
+
+export interface PageProps {
+    params?: { [key: string]: string | undefined },
+    // searchParams?: { [key: string]: string | undefined | number }
+    searchParams: CarsPageSearchParams;
+}
+
